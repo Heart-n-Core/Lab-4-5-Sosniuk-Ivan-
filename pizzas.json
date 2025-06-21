@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Прошутто",
+    "category": "М'ясна",
+    "description": "Піца з прошутто, свіжими томатами та пармезаном для справжніх гурманів.",
+    "pictureName": "pizza_1.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "370",
+      "price": 10.49
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "600",
+      "price": 14.99
+    }
+  },
+  {
+    "name": "Гавайська",
+    "category": "З ананасами",
+    "description": "Класична гавайська піца з соковитим ананасом та шинкою.",
+    "pictureName": "pizza_2.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "390",
+      "price": 9.79
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "620",
+      "price": 13.49
+    }
+  },
+  {
+    "name": "Печериця",
+    "category": "З грибами",
+    "description": "Ароматні печериці, вершковий соус та сир моцарела.",
+    "pictureName": "pizza_3.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "365",
+      "price": 9.29
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "590",
+      "price": 13.19
+    }
+  },
+  {
+    "name": "Фруті ді Маре",
+    "category": "З морепродуктами",
+    "description": "Мікс морепродуктів з часниковим соусом та свіжим базиліком.",
+    "pictureName": "pizza_4.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "410",
+      "price": 11.49
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "700",
+      "price": 15.99
+    }
+  },
+  {
+    "name": "Овочева фантазія",
+    "category": "Веганська",
+    "description": "Свіжі овочі, томатний соус та веганський сир.",
+    "pictureName": "pizza_5.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "360",
+      "price": 9.59
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "580",
+      "price": 12.99
+    }
+  },
+  {
+    "name": "Бекон BBQ",
+    "category": "М'ясна",
+    "description": "Копчений бекон, BBQ соус і червона цибуля.",
+    "pictureName": "pizza_6.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "400",
+      "price": 10.79
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "640",
+      "price": 14.69
+    }
+  },
+  {
+    "name": "Ананас Чилі",
+    "category": "З ананасами",
+    "description": "Гостра піца з ананасом, чилі та сиром чеддер.",
+    "pictureName": "pizza_7.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "375",
+      "price": 9.89
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "610",
+      "price": 13.39
+    }
+  },
+  {
+    "name": "Біла трюфельна",
+    "category": "З грибами",
+    "description": "Біла основа, трюфельне масло та шампіньйони.",
+    "pictureName": "pizza_8.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "385",
+      "price": 10.29
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "630",
+      "price": 14.49
+    }
+  },
+  {
+    "name": "Салмон делюкс",
+    "category": "З морепродуктами",
+    "description": "Ніжний лосось, вершковий соус і каперси.",
+    "pictureName": "pizza_9.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "430",
+      "price": 11.79
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "700",
+      "price": 16.29
+    }
+  },
+  {
+    "name": "Зелена веганська",
+    "category": "Веганська",
+    "description": "Броколі, цукіні, шпинат та веганський соус.",
+    "pictureName": "pizza_3.jpg",
+    "smallerSize": {
+      "radius": "30",
+      "weight": "355",
+      "price": 9.39
+    },
+    "biggerSize": {
+      "radius": "40",
+      "weight": "590",
+      "price": 12.79
+    }
+  }
+]
