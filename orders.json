@@ -1,0 +1,21 @@
+[
+    {"pizzaName":"Прошутто", "quantity":2, "isSmall":true},
+    {"pizzaName":"Гавайська", "quantity":3, "isSmall":false},
+    {"pizzaName":"Прошутто", "quantity":1, "isSmall":true},
+
+    {"pizzaName":"Прошутто", "quantity":3, "isSmall":false},
+    {"pizzaName":"Гавайська", "quantity":2, "isSmall":true},
+    {"pizzaName":"Печериця", "quantity":5, "isSmall":false},
+    {"pizzaName":"Фруті ді Маре", "quantity":1, "isSmall":true},
+    {"pizzaName":"Овочева фантазія", "quantity":2, "isSmall":false},
+    {"pizzaName":"Бекон BBQ", "quantity":4, "isSmall":true},
+    {"pizzaName":"Ананас Чилі", "quantity":3, "isSmall":false},
+    {"pizzaName":"Біла трюфельна", "quantity":2, "isSmall":true},
+    {"pizzaName":"Салмон делюкс", "quantity":1, "isSmall":false},
+    {"pizzaName":"Зелена веганська", "quantity":4, "isSmall":true},
+    {"pizzaName":"Прошутто", "quantity":2, "isSmall":true},
+    {"pizzaName":"Бекон BBQ", "quantity":1, "isSmall":false},
+    {"pizzaName":"Овочева фантазія", "quantity":3, "isSmall":true},
+    {"pizzaName":"Салмон делюкс", "quantity":2, "isSmall":true},
+    {"pizzaName":"Ананас Чилі", "quantity":5, "isSmall":true}
+]

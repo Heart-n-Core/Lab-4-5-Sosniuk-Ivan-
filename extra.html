@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ua">
-<script type="module" src="./dist/main.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KMA Pizza</title>
+    <title>Exra task</title>
+    <link rel="stylesheet" href="https://cdn.webdatarocks.com/latest/webdatarocks.css" />
     <style>
         /* Base styles for large screens (default layout) */
         :root{
@@ -37,7 +37,7 @@
         }
 
         .sidebar-left {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 10px;
             width: 80px;
@@ -57,7 +57,7 @@
         }
         .sidebar-left img {
             position:absolute;
-            top: 0;
+            top: -15px;
             left: 0;
             width: 80px;
             height: 250px;
@@ -137,10 +137,10 @@
         .header-container{
             display: flex;
             flex-direction: column;
-                        position: fixed;
+            /* position: fixed; */
             top: 0;
             left: 0;
-            width: calc(100vw - var(--sidebar-right-width));
+            /* width: calc(100vw - var(--sidebar-right-width)); */
             padding-left: 100px;
             padding-right: 60px;
             /* padding-inline: 100px; */
@@ -181,7 +181,6 @@
             font-weight: bold;
         }
         .header {
-
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -217,7 +216,6 @@
         }
 
         .header-left span {
-            margin-left: 15px;
             margin-right: 15px;
             color: #777;
         }
@@ -596,16 +594,18 @@
             /* .header-right {
                 margin-right: 20px
             } */
-
-
         }
 
-
+        #pivotContainer{
+            height: calc(100vh - 150px)!important;
+        }
         a:link,
         a:visited,
         a:hover,
         a:active {
-        color: #fff;}
+        color: #fff;      /* Set your preferred color */
+}
+
         @media (max-width: 950px) {
             .header-left span {
                 display: none;
@@ -624,70 +624,35 @@
     </style>
 </head>
 <body>
-     <div class="sidebar-left">
-            <img src="images/discount.svg">
-            <p>PIZZA</p>
-            <p style="font-size: 25px;">KMA</p>
-        </div>
-         <div class="discount">
-            <img src="images/discount.svg">
-            <p>ЦЬОГО ТИЖНЯ ЗНИЖКА НА ВСЕ</p>
-            <p style>-20%</p>
-        </div>
+
+
     <div class="container">
+        <div class="sidebar-left">
+    <img src="images/discount.svg">
+    <p>PIZZA</p>
+    <p>KMA</p>
+        </div>
         <main class="main-content">
             <div class="header-container">
                 <header id="header" class="header">
                 <div class="header-left">
-                    <div class="phone" id="phone-number">(044) 222 5 222</div>
-                    <span>24 години / 7 днів на тиждень</span>
-                    <span>Безкоштовна доставка піци</span>
+                    <span>Панель адміністратора</span>
                 </div>
                 <div class="header-right">
-                    <button id="login">Увійти</button>
+                    <button id="login">Вийти</button>
                 </div>
             </header>
             <header class="header">
-                Піца 
-                <a href="extra.html">ЛІНК НА ДОДАТКОВЕ ЗАВДАННЯ</a>
+                Статистика проданих піц 
+                <a href="index.html">ЛІНК НА ОСНОВНИЙ САЙТ</a>
             </header>
             </div>
 
-            <nav class="nav-menu">
-                <button class="active" id="all">Усі</button>
-                <button id="meat">М'ясна</button>
-                <button id="pineapple">З ананасами</button>
-                <button id="mushrooms">З грибами</button>
-                <button id="seafood">З морепродуктами</button>
-                <button id="vegan">Веганська</button>
-            </nav>
-
-            <section class="pizza-list" id="pizza-items-section">
-            <div>If you are reading this, you most likely opened html directly as file</div>
-            <div>Run it via any webserver instead, for example this command in root project folder</div>
-            <div>python -m http.server</div>
-            </section>
+            <div id="pivotContainer"></div>
 
         </main>
 
-    </div>
-    
-        <aside class="sidebar-right" id="order-summary-sidebar">
-            <div class="order-summary-header">
-                <div style="position: fixed; top: 0px; right: 0px; background-color: #fff; width: calc(var(--sidebar-right-width) - 5px); height: 50px; z-index: 1;"> </div>
-                <h3 style="z-index: 2;" id="order-summary-title">Замовлення <span id="order-item-count">0</span></h3>
-                <button style="z-index: 2;"id="clear-order-button">Очистити замовлення</button>
-            </div>
-
-            <div class="order-list" id="current-order-list">
-            </div>
-
-            <div class="order-summary">
-                <div class="total-price" >
-                Сума замовлення <span id="total-order-price">0 грн</span>
-            </div>
-            <button class="checkout-button" id="checkout-button">Замовити</button>
-            </div>
-        </aside>
+   <script src="https://cdn.webdatarocks.com/latest/webdatarocks.js"></script>
+    <script type="module" src="./dist/extra.js"></script>
 </body>
 </html>

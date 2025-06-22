@@ -1,7 +1,8 @@
-import { getPizzaList } from './pizza-manager.js'; // Assuming pizza-manager.ts is in the same directory
+import { getPizzaList } from './pizza-manager.js';
 const orderList = [];
 let cachedPizzas = [];
-const backend = `http://${window.location.host}`;
+// const backend = `${window.location.protocol}://${window.location.host}`;
+const backend = `${window.location.protocol}`;
 /**
  * Generates the HTML string for a single pizza size option.
  *

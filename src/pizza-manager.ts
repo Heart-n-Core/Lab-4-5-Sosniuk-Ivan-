@@ -1,4 +1,4 @@
-import { Pizza } from './pizza-interfaces'; // Assuming pizza-interfaces.ts is in the same directory
+import { Pizza } from './pizza-interfaces.js'; // Assuming pizza-interfaces.ts is in the same directory
 
 /**
  * An in-memory list for pizzas added dynamically after initial load.
