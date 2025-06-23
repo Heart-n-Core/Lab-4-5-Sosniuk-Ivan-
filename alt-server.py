@@ -75,17 +75,54 @@ class SimpleHandler(BaseHTTPRequestHandler):
         if self.path == "/order":
             content_length = int(self.headers.get('Content-Length', 0))
             post_data = self.rfile.read(content_length) if content_length > 0 else b""
-            
-            # For demo, just echo back the length of data received
-            response = f"Received POST data of length: {len(post_data)}".encode()
-            # response = f"Order processed successfully".encode()
-            response_data= {"message":"Order processed successfully"}
-            response_json = json.dumps(response_data).encode('utf-8')
+            try:
+                order = json.loads(post_data)
+                if not isinstance(order, list):
+                    raise ValueError("Order must be a list")
 
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(response_json)
+                # Load valid pizza names from pizzas.json
+                with open("pizzas.json", "r", encoding="utf-8") as f:
+                    pizzas = json.load(f)
+                    valid_names = {p['name'] for p in pizzas}
+
+                # Validate order
+                for item in order:
+                    if item["pizzaName"] not in valid_names:
+                        self.send_response(400)
+                        self.end_headers()
+                        self.wfile.write(f"Invalid pizza name: {item['pizzaName']}".encode("utf-8"))
+                        return
+
+                orders_file = "orders.json"
+                if os.path.exists(orders_file):
+                    with open(orders_file, "r", encoding="utf-8") as f:
+                        try:
+                            existing_orders = json.load(f)
+                            if not isinstance(existing_orders, list):
+                                existing_orders = []
+                        except json.JSONDecodeError:
+                            existing_orders = []
+                else:
+                    existing_orders = []
+
+                # Append new orders
+                existing_orders.extend(order)
+
+                # Write back as proper JSON array
+                with open(orders_file, "w", encoding="utf-8") as f:
+                    json.dump(existing_orders, f, ensure_ascii=False, indent=2)
+
+                # Success response
+                self.send_response(200)
+                self.send_header("Content-type", "application/json")
+                self.end_headers()
+                response_data = {"message": "Order processed successfully"}
+                self.wfile.write(json.dumps(response_data).encode("utf-8"))
+
+            except Exception as e:
+                self.send_response(400)
+                self.end_headers()
+                self.wfile.write(f"Bad request: {str(e)}".encode("utf-8"))
         else:
             self.send_response(404)
             self.end_headers()
